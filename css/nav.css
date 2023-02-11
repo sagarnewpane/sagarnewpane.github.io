@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header li,header a{
+    font-size: 15px;
+    color:#f3eaea;
+    text-decoration: none;
+}
+
+header{
+    max-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: #005C73;
+}
+.dropdown{
+    display: none;
+}
+.sticky{
+    z-index: 100;
+    position: fixed;
+    transition: all 0.3s ease-in-out ;
+    top: 0;
+    left: 0;
+    right: 20px;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0,0.1);
+}
+/* Scroll Stuff */
+
+.scroll-down header{
+    transform: translate3d(0,-100%,0);
+}
+.scroll-up header{
+    filter: drop-shadow(0 -10px 20px rgb(170,170,170));
+}
+
+header nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.logo{
+    margin-left: 40px;
+    margin-right: auto;
+ } 
+.logo a{
+    color: #f3eaea;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.logo span{
+    color: #00C6D0;
+}
+
+.nav_links{
+    list-style: none;
+    
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 15px;
+}
+.nav_links li a{
+    display: block;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    transition: all 0.3s ease 0s;
+    color: #00C6D0;
+}
+.contact button{
+    text-transform: uppercase;
+    margin-right: 15px;
+    font-weight: 500;
+    color: aliceblue;
+    padding: 9px 25px;
+    background-color: #00C6D0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.contact button:hover{
+    background-color: #034a5c;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* responsive */
+
+@media only screen and (max-width: 810px){
+    .logo{
+        margin-left: 2vw;
+    }
+    .dropdown{
+        display: block;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+    .dropdown .line{
+        width: 30px;
+        height: 3px;
+        background: #f3eaea;
+        margin: 6px 0;
+
+    }
+    header{
+        padding: 0 50px;
+    }
+
+    
+    .active{
+        height: 550px;
+    }
+    .nav_links li a{
+        color: #f3eaea;;
+    }
+
+    nav{
+        height: 0px;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #005C73;
+        transition: 0.3s ease ;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+    }
+    .active ul{
+        opacity: 1;
+    }
+    .contact{
+        margin-bottom: 40px;
+    }
+    .contact button{
+        margin: 0;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    nav ul a{
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    nav ul:first-child{
+        margin-top: 40px;
+    }
+
+}

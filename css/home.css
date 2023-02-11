@@ -1,0 +1,95 @@
+body{
+    background-color: #E6F4F1;
+}
+
+.content{
+    min-height: 80vh;
+    display: flex;
+}
+.content .left{
+    width: 60%;
+    padding: 15vh 0vh 0vh 7vh;
+    color: #2F242C;
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.role{
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 30px;
+}
+.desc{
+    font-size: 2rem;
+}
+.content .left a{
+    text-decoration: none;
+    color:#005C73;
+}
+.content .left a:hover{
+    color:#00C6D0;
+}
+.content .right{
+    width: 40%;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-10%);
+    transition: all 0.5s ;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* responsive */
+@media only screen and (max-width: 700px){
+    .content .left{
+        padding: 10vh 0vh 4vh 2vh;
+        width: 100%;
+
+    }
+    .content h1{
+        font-size: 2rem
+    }
+    .role{
+        font-size: 3.3rem;
+        line-height: 3rem;
+    }
+    .desc{
+        font-size: 1.8rem;
+    }
+    .hidden{
+        opacity: 0;
+        transform: translateX(-10%);
+        transition: 0.5s all;
+    }
+    .show{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #005C73;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #00C6D0;
+}

@@ -1,0 +1,163 @@
+body{
+    background-color:  #E6F4F1;
+    line-height: 1.5;
+    color: #2F242C;
+}
+.ref-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ref-content h1{
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+.ref-content h2{
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+.ref-content p{
+    font-size: 1.6rem;
+    margin: 0px;
+}
+
+.site-inspiration,.timeline-inspiration ,.effect-inspiration,.footer-inspiration,.logo-site,.other{
+    margin: 0 10px 200px 10px;
+    text-align: center;
+}
+
+.top,.other{
+    text-align: center;
+}
+.bottom{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.bottom img{
+    width: 50%;
+}
+.bottom p{
+    width: 50%;
+}
+
+.bottom .center-frame{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    
+}
+
+.timeline-inspiration .bottom .center-frame{
+    order: 2;
+}
+.timeline-inspiration .bottom p{
+    order: 1;
+}
+
+.footer-inspiration .bottom img{
+    order: 2;
+}
+.footer-inspiration .bottom p{
+    order: 1;
+}
+.logo-site{
+    text-align: center;
+}
+.logo-site a{
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #005C73;
+}
+.logo-site a:hover{
+    transition: 0.2s ease 0s;
+    color: #EEB4B3;
+    transform: translateY(5px);
+}
+
+.other h4{
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+.other .site-links a{
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #005C73;
+}
+.other .site-links a:hover{
+    transition: 0.2s ease 0s;
+    color: #EEB4B3;
+    transform: translateY(5px);
+}
+
+/* responsive */
+@media only screen and (max-width: 700px){
+    .ref-content h1{
+        font-size: 1.5rem;
+    }
+    .bottom{
+        flex-wrap: wrap;
+    }
+    .bottom img{
+        width: 95vw;
+    }
+    .bottom p{
+        width: 95vw;
+    }
+    .bottom .center-frame{
+        width: 95vw;
+    }
+    .bottom p,.logo-site p,.other p{
+        font-size: 1.2rem;
+    }
+    .site-inspiration,.timeline-inspiration ,.effect-inspiration,.footer-inspiration,.logo-site,.other{
+        margin: 0 10px 100px 10px;
+    }
+    .hidden{
+        opacity: 0;
+        transform: translateX(-10%);
+        transition: 0 all;
+    }
+    .show{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* scroll animation */
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-10%);
+    transition: all 0.8s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000000;
+    }
+    
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #005C73;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #00C6D0;
+}
